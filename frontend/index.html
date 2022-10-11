@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Yeah we watchin'</title>
+    <style>
+        video {
+            /* height: 100%;
+            width: 100%; */
+            /* position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0; */
+            height: 100vh;
+            width: 100%;
+        }
+
+        body {
+            margin: 0;
+            background: black;
+        }
+
+        p {
+            color: white;
+        }
+    </style>
+    <script src="index.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="admin-panel" hidden>
+        <p id="debug-info">Debug info here</p>
+        <input type="password" id="input-password"></input>
+        <button id="button-pause">Pause</button>
+        <button id="button-play">Play</button>
+        <input type="text" id="input-url"></input>
+        <button id="button-seturl">Set url</button>
+        <input type="text" id="input-seek"></input>
+        <button id="button-seek">Seek</button>
+        <button id="button-close">Close</button>
+    </div>
+    <video id="player" type="video/mp4"
+        src="https://file-examples.com/storage/feb2e515cc6339d7ba1ffcd/2017/04/file_example_MP4_480_1_5MG.mp4"
+        controls></video>
+</body>
+
+</html>

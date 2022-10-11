@@ -1,22 +1,14 @@
 use serde::Serialize;
 
-#[derive(Serialize)]
+#[derive(Serialize, Clone, Copy)]
 pub enum State {
     Playing,
     Paused,
 }
 
 #[derive(Serialize)]
-#[serde(tag = "t")]
-pub enum Event {
-    Ready(ReadyEvent),
-    ClockUpdate(u64),
-    StateUpdate(State),
-}
-
-#[derive(Serialize)]
-#[serde(tag = "t")]
-pub struct ReadyEvent {
-    clock: u64,
-    state: State,
+pub struct UpdateEvent {
+    pub ts_millis: u64,
+    pub state: State,
+    pub media_url: String,
 }
